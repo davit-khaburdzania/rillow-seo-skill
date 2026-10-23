@@ -1,0 +1,24 @@
+{
+  "name": "rillow-seo",
+  "version": "0.1.0",
+  "description": "SEO guides for your agent, with Rillow's MCP server for keyword data, Google results, a content plan and rank tracking.",
+  "author": {
+    "name": "Rillow",
+    "email": "hello@rillow.ai",
+    "url": "https://rillow.ai"
+  },
+  "homepage": "https://rillow.ai/seo-mcp-server",
+  "repository": "https://github.com/davit-khaburdzania/rillow-seo-skill",
+  "license": "Apache-2.0",
+  "privacyPolicyUrl": "https://rillow.ai/privacy",
+  "keywords": [
+    "seo",
+    "claude-seo",
+    "seo-skill",
+    "mcp",
+    "keyword-research",
+    "content",
+    "ai-search",
+    "rank-tracking"
+  ]
+}

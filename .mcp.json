@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "rillow": {
+      "type": "http",
+      "url": "https://rillow.ai/mcp"
+    }
+  }
+}

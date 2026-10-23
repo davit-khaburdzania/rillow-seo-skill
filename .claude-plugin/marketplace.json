@@ -1,0 +1,29 @@
+{
+  "name": "rillow",
+  "owner": {
+    "name": "Rillow",
+    "email": "hello@rillow.ai"
+  },
+  "metadata": {
+    "description": "Rillow's SEO skill for Claude Code, with Rillow's MCP server for the data.",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "rillow-seo",
+      "description": "SEO guides for your agent, with Rillow's MCP server for keyword data, Google results, a content plan and rank tracking.",
+      "version": "0.1.0",
+      "author": {
+        "name": "Rillow",
+        "email": "hello@rillow.ai",
+        "url": "https://rillow.ai"
+      },
+      "homepage": "https://rillow.ai/seo-mcp-server",
+      "repository": "https://github.com/davit-khaburdzania/rillow-seo-skill",
+      "license": "Apache-2.0",
+      "keywords": ["seo", "claude-seo", "seo-skill", "mcp", "keyword-research", "content", "ai-search", "rank-tracking"],
+      "category": "marketing",
+      "source": "./"
+    }
+  ]
+}
