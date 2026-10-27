@@ -1,6 +1,6 @@
 {
   "name": "rillow-seo",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "SEO guides for your agent, with Rillow's MCP server for keyword data, Google results, a content plan and rank tracking.",
   "author": {
     "name": "Rillow",

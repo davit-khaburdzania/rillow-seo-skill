@@ -6,13 +6,13 @@
   },
   "metadata": {
     "description": "Rillow's SEO skill for Claude Code, with Rillow's MCP server for the data.",
-    "version": "0.2.0"
+    "version": "0.2.1"
   },
   "plugins": [
     {
       "name": "rillow-seo",
       "description": "SEO guides for your agent, with Rillow's MCP server for keyword data, Google results, a content plan and rank tracking.",
-      "version": "0.2.0",
+      "version": "0.2.1",
       "author": {
         "name": "Rillow",
         "email": "hello@rillow.ai",
