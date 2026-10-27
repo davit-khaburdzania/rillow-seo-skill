@@ -9,7 +9,7 @@ Rillow starts free with 30 credits, no credit card.
 
 ## What's inside
 
-Eight guides in [`skills/rillow-seo`](skills/rillow-seo), and the rules that apply to all of them in [`SKILL.md`](skills/rillow-seo/SKILL.md).
+Nine guides in [`skills/rillow-seo`](skills/rillow-seo), and the rules that apply to all of them in [`SKILL.md`](skills/rillow-seo/SKILL.md).
 
 | Guide | Your agent reads it when |
 |---|---|
@@ -21,6 +21,7 @@ Eight guides in [`skills/rillow-seo`](skills/rillow-seo), and the rules that app
 | [links](skills/rillow-seo/links.md) | Internal linking, or you ask how to get backlinks |
 | [ai-search](skills/rillow-seo/ai-search.md) | You ask about ChatGPT, Perplexity, Claude, Copilot, Google AI Overviews or AI Mode |
 | [measure](skills/rillow-seo/measure.md) | After a change ships, or when you ask whether something worked |
+| [writing](skills/rillow-seo/writing.md) | Before it writes any text for your site: posts, pages, titles, descriptions or emails |
 
 A few of the rules: every number comes from a tool or your own data, never a guess.
 Every recommendation names the exact URL, the exact change and how you will know it worked.

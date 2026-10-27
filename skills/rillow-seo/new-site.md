@@ -169,7 +169,7 @@ Decide the URL folders before anything is published, for example `/features/`, `
 Renaming them later is a migration.
 Google says keywords in the URL have hardly any effect.
 Give each folder a hub page that links to every page in it, and link every page from at least one other page.
-Read the content guide before writing any of these pages, and the links guide for internal links.
+Read the content and writing guides before writing any of these pages, and the links guide for internal links.
 
 ## 6. First keywords for a new domain
 

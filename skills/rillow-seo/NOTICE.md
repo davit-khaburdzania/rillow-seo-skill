@@ -6,6 +6,8 @@ Google's documentation is licensed under CC BY 4.0, and its code samples under A
 The AI search guide also follows Bing's Webmaster Guidelines and the crawler pages of OpenAI, Anthropic and Perplexity, checked on 13 October 2026.
 The content guide's figure on self-ranked lists comes from Lily Ray's study in Search Engine Land, ["Google AI Overviews cite self-serving listicles, but recommend competitors 69% of the time"](https://searchengineland.com/google-ai-overviews-cite-self-serving-listicles-recommend-competitors-480573), 18 June 2026.
 
+The writing guide's rules are Anthropic's humanize-writing skill from Claude's built-in skills, adapted for writing on a website: the site's saved voice comes first, and save_article checks the patterns code can find.
+
 The structure and many of the working methods build on other open-source SEO skills:
 
 - [ivangdavila/seo](https://clawhub.ai/ivangdavila/seo) on ClawHub, MIT-0: the audit order, the ranking-drop triage, prioritising by traffic at stake, counting problems per template, the timing table, and many of the traps.

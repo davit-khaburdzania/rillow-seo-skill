@@ -5,7 +5,7 @@ End with a page that answers the search better than what ranks now, saved with s
 
 ## 1. The workflow
 
-get_brief's writing guide covers the writing itself, and this guide covers the rest.
+get_brief and the writing guide cover the writing itself, and this guide covers the rest.
 
 1. Take the plan item from get_project.
    If the page the user wants is not in the plan, add it with update_plan first, choosing it as the keywords guide says.
