@@ -10,7 +10,7 @@ Content work is wasted while Google cannot crawl or index the pages.
 
 1. Call get_project.
    If the site is not in Rillow yet, call list_projects, then create_project with the domain and the country the user sells to.
-   create_project uses up to about 5 credits to pull the site and its competitors, so tell the user before you call it.
+   create_project uses up to about 10.5 credits to pull the site and its competitors, so tell the user before you call it.
    Rillow then pulls the domain rating, ranked keywords and competitors in the background, and get_project shows data_ready.pulling until they are ready.
 2. Read the memory.
    If it does not say what the product does, who it is for, what it costs, which competitors the user names and which tools it integrates with, ask the user and save the answers with remember in the product, audience and competitors sections.
@@ -177,8 +177,8 @@ A new domain has few links and no history, so it cannot win broad, competitive s
 Aim for specific, long-tail, high-intent searches where the current top 10 already includes small sites or forum threads.
 The keywords guide has the full method.
 
-A find_keywords seed used for the first time uses about 0.3 credits and a get_serp call 0.03 to 0.06.
-get_competitors uses about 0.3 for a competitor domain the first time, and without a domain up to 5 on a new site.
+A find_keywords seed used for the first time uses about 0.5 credits and a get_serp call 0.06 to 0.12.
+get_competitors uses about 0.5 for a competitor domain the first time, and without a domain up to 12 on a new site.
 Saved results are free to read again.
 Plan the calls and tell the user how many you will use.
 

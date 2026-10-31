@@ -141,7 +141,7 @@ For each chosen post:
 1. Call get_brief with refresh: true and the post's card_id.
    It adds the post's rank history and the site's Search Console queries from the last 28 days that contain the keyword.
    Those queries are site-wide, not for that page alone.
-   An uncached call uses up to 0.3 credits, for the results plus up to five pages it measures, and is then free for 7 days.
+   An uncached call uses up to 0.2 credits, for the results plus up to five pages it measures, and is then free for 7 days.
 2. Read the content guide and rework the post from the brief.
 3. After it ships, update the visible date and dateModified only if the content changed substantially.
 4. Record the refresh in the change log below.

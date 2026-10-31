@@ -30,6 +30,7 @@ Each guide is a file next to this one (keywords.md for keywords, and so on), and
 | content | Writing or refreshing a post, or building a feature, comparison, best list, alternatives, integration or pricing page |
 | links | Internal linking, or the user asks how to get backlinks |
 | ai-search | The user asks about ChatGPT, Perplexity, Claude, Copilot, Google AI Overviews or AI Mode |
+| agents | The user wants AI agents to find and use the site, or an audit reaches agent readiness |
 | measure | After a change ships, when reviewing performance, or when the user asks how long something takes |
 | writing | Before you write any text for the site: posts, pages, titles, descriptions, alt text or emails |
 

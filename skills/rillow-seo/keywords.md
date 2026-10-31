@@ -40,15 +40,15 @@ Paid calls use the user's Rillow credits, and each result says how many.
 | Call | Cost |
 |---|---|
 | find_keywords without a seed, or with a seed used before | Free, it reads saved data |
-| find_keywords with a new seed | About 0.3 credits, then saved |
-| get_competitors without a domain | Free, or up to 5 credits on a new site |
-| get_competitors with a new domain | About 0.3 credits, then saved |
-| get_serp | 0.03 to 0.06 credits, then free for 12 hours |
-| get_serp with strength | About 0.7 credits more, then free for 7 days |
-| get_keyword_metrics | Up to 0.5 credits for 200 keywords, then saved |
+| find_keywords with a new seed | About 0.5 credits, then saved |
+| get_competitors without a domain | Free, or up to 12 credits on a new site |
+| get_competitors with a new domain | About 0.5 credits, then saved |
+| get_serp | 0.06 to 0.12 credits, then free for 12 hours |
+| get_serp with strength | About 1.5 credits more, then free for 7 days |
+| get_keyword_metrics | Up to 1.1 credits for 200 keywords, then saved |
 | get_performance with queries | Free |
-| get_ranked_keywords | Up to 0.5 credits, then free for a day |
-| get_brief | Up to 0.3 credits when uncached, then free for 7 days |
+| get_ranked_keywords | Up to 1.1 credits, then free for a day |
+| get_brief | Up to 0.2 credits when uncached, then free for 7 days |
 
 Work in this order.
 

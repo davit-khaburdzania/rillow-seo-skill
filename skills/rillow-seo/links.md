@@ -173,7 +173,7 @@ In one 2026 vendor study of B2B SaaS sites, statistics pages earned the most lin
 Treat that as directional.
 
 To find where similar products are listed, take the competitors from get_project or get_competitors and, if you have web search, search their names with words such as "alternatives", "directory" and "integrations".
-get_backlinks with a competitor's domain lists the sites that link to it for up to about 0.7 credits, and is then free for a day.
+get_backlinks with a competitor's domain lists the sites that link to it for up to about 1.6 credits, and is then free for a day.
 Use competitors with a similar product and audience, not large sites that only share keywords.
 A site that links to two or more competitors but not to the user is the likeliest prospect.
 Open its page before you suggest it, and drop it if it only sells links.

@@ -68,7 +68,7 @@ Notes on the layers:
 - Your live fetch shows what a page declares.
   URL Inspection, through the user, shows what Google indexed and which canonical it chose.
 - For a plan post whose brief was fetched in the last 7 days, read get_brief, which is then free.
-  Otherwise use get_serp, 0.03 to 0.06 credits, while an uncached get_brief uses up to 0.3.
+  Otherwise use get_serp, 0.06 to 0.12 credits, while an uncached get_brief uses up to 0.2.
 - For Core Web Vitals, follow the technical guide.
   The PageSpeed Insights API always returns lab data, adds field data only when Chrome has enough traffic for the page or site, and may fail with 429 without a key.
   Report lab data as lab data, not as a ranking problem.
@@ -177,7 +177,8 @@ Use this structure:
 1. Verdict: one or two sentences on what limits the site most and what it is worth.
 2. Top 5 fixes, highest priority first.
    For each: the URL, or the template with its page count, and what rule 6 asks for, with the source of each piece of evidence.
-3. Everything else, grouped by type (indexing, intent, technical, content, links), one line each.
+3. Everything else, grouped by type (indexing, intent, technical, content, links, agent readiness), one line each.
+   Agent readiness (the agents guide) stays out of the top 5, as it doesn't move rankings.
 4. What you could not check, and why, such as no Search Console export or no URL Inspection results.
 
 A good finding reads like this:
