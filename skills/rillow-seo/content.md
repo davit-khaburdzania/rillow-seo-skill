@@ -109,9 +109,9 @@ The measure guide says which posts to refresh.
    - Which of the Search Console queries does the post not answer?
    - Which People Also Ask questions does it miss?
 4. Size the change to the problem.
-   Google advises against changing pages that already perform well, so a post that still ranks well needs targeted fixes, not a rewrite.
+   Google advises against changing pages that perform well, so a post that still ranks needs targeted fixes, not a rewrite.
 5. Update facts, prices, product names, screenshots and examples.
-   Add the missing subtopics and remove sections nobody needs any more.
+   Add the missing subtopics and remove sections nobody needs.
    Rework the title and first paragraph if people now phrase the search differently.
 6. Keep the URL.
    A new URL starts without the old one's history and needs a redirect, which rule 8 says to ask about.

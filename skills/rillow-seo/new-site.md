@@ -10,8 +10,8 @@ Content work is wasted while Google cannot crawl or index the pages.
 
 1. Call get_project.
    If the site is not in Rillow yet, call list_projects, then create_project with the domain and the country the user sells to.
-   create_project uses up to about 10.5 credits to pull the site and its competitors, so tell the user before you call it.
-   Rillow then pulls the domain rating, ranked keywords and competitors in the background, and get_project shows data_ready.pulling until they are ready.
+   create_project uses up to about 10.5 credits, so tell the user first.
+   Rillow then pulls the site's data in the background, and get_project shows data_ready.pulling until it is ready.
 2. Read the memory.
    If it does not say what the product does, who it is for, what it costs, which competitors the user names and which tools it integrates with, ask the user and save the answers with remember in the product, audience and competitors sections.
 3. Find the framework in the repository and where the production URL is configured, because canonicals and the sitemap are built from it.
@@ -106,7 +106,7 @@ Never copy ratings from G2, Capterra, Trustpilot or an app store into markup.
 Google's review rules require reviews that are collected by the site and visible on the page.
 
 These no longer earn rich results, so do not add them for Google: `FAQPage` (shown for no site since 2026-05-07), `HowTo` (removed in 2023), and `SearchAction` for the sitelinks search box (removed in November 2024).
-Existing markup of these types does no harm and does not need removing.
+Existing markup of these types does no harm.
 
 Validate each page template in the Rich Results Test (https://search.google.com/test/rich-results).
 For a local build, paste the page HTML into its code tab.
@@ -128,7 +128,7 @@ Give them exact instructions, and do the repository steps yourself.
    Exclude removes the site from AI Overviews, AI Mode and Discover AI features.
 5. Connect Search Console and Google Analytics to Rillow.
    get_project says whether they are connected and gives the user the link.
-   Without Search Console, get_performance has no clicks or impressions and get_brief has no query data.
+   Without Search Console, get_performance and get_brief have no clicks, impressions or queries.
 6. In Bing Webmaster Tools, import the site from Search Console.
    The import verifies the site and brings the sitemaps, and data appears after about 48 hours.
    Bing's index also feeds Copilot answers.
@@ -143,9 +143,7 @@ Give them exact instructions, and do the repository steps yourself.
    ```
 
    A 200 or 202 response means it was accepted.
-   Check the CMS or host for an IndexNow setting first.
-   Otherwise add the POST to CI or a deploy hook after the production deploy, because you are not there for each deploy.
-   Without a repository, point the user to that setting or give them the command.
+   Check the CMS or host for an IndexNow setting first, otherwise add the POST to a deploy hook or CI after production deploys.
 
 Do not use Google's Indexing API.
 It is only for job posting and livestream pages.
@@ -191,8 +189,7 @@ Plan the calls and tell the user how many you will use.
    Call find_keywords with each.
 4. Shortlist by intent first, then difficulty, then volume.
    Prefer searches where the person is choosing a tool or trying to solve the exact problem the product solves: alternatives, comparisons, "tool for X", "how to do X in Y".
-   Difficulty is DataForSEO's estimate of the chance of reaching the top 10, on a logarithmic scale from 0 to 100, calculated from the link profiles of the current top 10 pages among other factors.
-   It does not predict this site's chances.
+   Difficulty is DataForSEO's 0 to 100 estimate, mostly from the links of the current top 10 pages, and does not predict this site's chances.
    Low volume is fine for bottom-of-funnel searches.
 5. Call get_serp on the 5 to 10 best candidates.
    Winnable signs: Reddit, Quora, Stack Overflow or other forum results, small or niche sites, thin or outdated pages, results that answer a slightly different question.
@@ -211,6 +208,9 @@ Plan the calls and tell the user how many you will use.
 Google finds a new site's pages through links and sitemaps, so first impressions take days to weeks, and meaningful non-branded clicks usually take months.
 In Ahrefs' study (updated May 2025), 1.74 percent of newly published pages reached the top 10 within a year, and low-volume keywords ranked faster than high-volume ones.
 The measure guide has the usual time for each kind of change and how to judge one.
+
+End the first session with what comes next: the weekly check each Monday and about one new page a week, while Google takes weeks to show the first ones.
+If you can run tasks on a schedule, offer to run "Do my weekly Rillow check." every Monday.
 
 ## Mistakes to avoid
 

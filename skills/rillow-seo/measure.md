@@ -8,6 +8,7 @@ You end with an honest answer about whether a change worked, or that it is too e
 Call get_performance without card_id for the whole site.
 
 - Site totals: Search Console clicks, impressions and average position, and Analytics sessions and users, for the 28 days ending on the latest day Rillow has synced, against the 28 days before.
+  The non-branded line leaves out searches that contain the brand names get_project lists under brand, so judge SEO work on it.
   If that day is more than a few days ago, ask the user to open the Traffic page of the Rillow dashboard, which fetches Google's latest data when it opens, then call get_performance again.
   The Search Console totals cover web search only.
   Analytics users are daily users added up, so they count a returning person more than once.
@@ -18,14 +19,17 @@ Call get_performance without card_id for the whole site.
   Movement compares the latest position with the one 28 days before, or 7 days when there is no older check, and "flat" means within one position.
   "new" means there is no earlier check to compare with.
   The list stops at 50 posts.
-- Only plan posts marked published are tracked.
-  For any other page, use the user's Search Console export.
+- Each post's indexed column is Google's URL Inspection answer, which Rillow asks nightly until the post is indexed.
+- Only plan posts marked published get daily positions.
+  For every page, call get_performance with pages true: each page against the 28 days before, biggest click loss first, with the likely reason, and the pages on page two that need links.
 
 Call get_performance with queries true for the site's Search Console queries at an average position of 4 to 20 over the same 28 days, most impressions first.
 They show on page one or two already, so the page that ranks for each is the one to improve.
-The table marks queries already in the plan and shows Rillow's volume when it has one.
+Branded searches are left out unless you pass branded.
+Each row shows the page Google showed most for the query, its click rate next to the site's own at that position, and whether the plan has it.
+With position_min 1 and position_max 5, a click rate well below the site's own points to the title.
 
-Call get_performance with a card_id for one post: its daily positions for 90 days, and a weekly table of Search Console clicks, impressions and average position with Analytics visitors.
+Call get_performance with a card_id for one post: its daily positions for 90 days, the searches that showed it, its index status, and a weekly table of Search Console clicks, impressions and average position with Analytics visitors.
 Weeks start on Monday, and the first and last weeks can be partial, so leave partial weeks out of any comparison.
 
 The two positions are different measures, so do not compare one with the other:
@@ -36,7 +40,6 @@ The two positions are different measures, so do not compare one with the other:
 | Good for | Following one keyword over time | The page's real exposure across all its queries |
 | Limits | One query, one check, not what every searcher sees | Moves when the mix of queries changes |
 
-The site totals include branded searches, so they cannot show on their own whether SEO work grew traffic.
 
 ## What Search Console numbers mean
 
@@ -170,13 +173,14 @@ The ai-search guide covers the prompt protocol in full, Bing's AI Performance re
 
 Later sessions can judge a change only if they know what changed and when.
 
-- After each change ships, add a note with remember.
-  Write the date, the URL, what changed, the target search, and when to judge it, in one or two sentences.
-  For example: "2026-10-06: rewrote the title and description of /blog/x for 'y'. Judge after 2026-10-27."
+- After each change ships, add a note with remember, with page (the changed URL) and check_on (the day to judge it, from the table above).
+  Write what changed and the target search in one or two sentences, such as "Rewrote the title and description of /blog/x for 'y'."
+  Rillow saves the page's Search Console numbers for the last 28 days with the note.
 - Suggest the user add the same note as an annotation in Search Console.
   An annotation holds up to 120 characters and everyone with access to the property sees it.
-- At the start of a measuring session, read the change notes in get_project.
-  Judge each one whose date has passed, then save the verdict as a new note, such as "2026-10-06 title of /blog/x: no clear change after 4 weeks", and remove the old note with remember and remove_note.
+- At the start of a measuring session, read changes_due in get_project: each change whose check day has come, with the page's numbers then (before) and now.
+  Judge each one as above, then save the verdict as a new note, such as "2026-10-06 title of /blog/x: no clear change after 4 weeks", and remove the old note with remember and remove_note.
+  Changes not due yet are only counted. Say "not due" for those pages and leave them alone.
 - A note holds at most 300 characters and a section 1,500, and get_project shows only the 30 newest notes.
   If notes_left_out is set, older change notes are hidden, so ask the user for earlier change dates or read the commit log.
   Keep each verdict to one line, or remove the note, so old notes do not crowd out the rest.

@@ -32,42 +32,43 @@ Each guide is a file next to this one (keywords.md for keywords, and so on), and
 | ai-search | The user asks about ChatGPT, Perplexity, Claude, Copilot, Google AI Overviews or AI Mode |
 | agents | The user wants AI agents to find and use the site, or an audit reaches agent readiness |
 | measure | After a change ships, when reviewing performance, or when the user asks how long something takes |
+| weekly | The user asks for the weekly check, or a regular review of what to change next |
 | writing | Before you write any text for the site: posts, pages, titles, descriptions, alt text or emails |
 
 ## Rules
 
 These apply to every guide.
 
-1. Take every number from Rillow's tools or the user's own data, such as a Search Console export.
-   Never make up search volume, difficulty, positions, clicks or traffic.
-   When you derive a number from that data, such as a rough click estimate, show the inputs and the arithmetic and call it an estimate.
+1. Take every number from Rillow's tools or the user's own data, such as a Search Console export, and never make one up.
+   When you derive a number, like a click estimate, show the inputs and the arithmetic and call it an estimate.
    When the data is missing, say so.
 2. Say where a number comes from and how old it is.
-   Volume, difficulty, domain rating and the positions find_keywords returns are DataForSEO estimates, and the ranked keywords were pulled when the project was created (get_project's created_at).
-   get_performance reads Search Console as the user last synced it in the Rillow dashboard, so check its dates.
-   Search Console clicks, impressions and positions are Google's own counts.
+   Volume, difficulty, domain rating and the positions find_keywords returns are DataForSEO estimates, and the ranked keywords date from get_project's created_at.
+   Search Console numbers are Google's own, as of the dates get_performance gives.
    get_serp and the daily rank checks are live.
 3. Check the live site before you call anything missing or broken.
    Fetch the page as Google gets it, for example with `curl -sL -A "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)" <url>`, and read the HTML.
    The repository can be ahead of production or behind it.
-   If that request gets a 403 or a challenge page, repeat it with a browser user agent, because many CDNs block requests that claim to be Googlebot from other addresses.
+   On a 403 or a challenge page, retry with a browser user agent, since many CDNs block fake Googlebot.
    Only URL Inspection in Search Console shows whether the real Googlebot is blocked.
-   Without a shell, your web fetch may return converted text without status codes, headers or head tags, so ask the user to run the command and paste the output.
-4. Read the current Google results for a search before you decide what page should target it.
-   get_serp and get_brief return them.
-   The top results show the intent, format and depth Google rewards for that search.
+   Without a shell, a web fetch can drop status codes and head tags, so ask the user to run the command and paste the output.
+4. Read the current Google results for a search (get_serp or get_brief) before you decide which page targets it.
+   They show the intent, format and depth Google rewards.
 5. Improve an existing page before you create a new one for the same search.
    Two pages for one search compete with each other.
-6. Every recommendation names the exact URL and the exact change, what it is worth according to the data, and how you will know it worked.
+6. Every recommendation names the exact URL and change, what it is worth according to the data, and how you will know it worked.
    "Improve the content" is not a recommendation.
 7. Never promise rankings, traffic, indexing, AI citations or dates.
    Explain how the change works and give the usual range from the measure guide.
 8. Ask before changes that are hard to undo: deleting or redirecting pages, changing URLs, editing robots.txt, adding noindex, or editing many pages at once.
    Show the list of pages first.
 9. In the user's repository, follow how the site is already built.
-   Check each change in a local build by reading the HTML it outputs, and check the live page again after the user deploys.
-   Without the repository, give the user the exact change to make.
-10. Save what you learn with remember: the product, the audience, the voice and what to avoid in their sections, decisions and shipped changes as notes.
+   Check each change in the HTML a local build outputs, and the live page again after the user deploys.
+   Without the repository, give the user the exact text to change on each page, ask them to tell you when it is live, then save the change note.
+10. Save what you learn with remember: product, audience, voice and what to avoid in their sections, decisions and shipped changes as notes.
     Read the memory from get_project before asking the user something it already answers.
-11. Report the few findings that matter most first, at most five, each with its evidence.
+11. Report the findings that matter most first, at most five, each with what to do and its evidence.
     Group the rest below, and end with what you could not check.
+    The first time you use an SEO term with the user, explain it in a few words, like "impressions (times Google showed the page)".
+12. Leave a page alone until its last change is due, and never suggest deleting a page under about 6 months old.
+    Draw no conclusion from under about 100 impressions a month (rules of thumb).

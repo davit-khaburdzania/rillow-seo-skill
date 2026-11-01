@@ -5,11 +5,11 @@ Your agent reads the guide for the job (an audit, keyword research, a new post, 
 
 It works in Claude Code, Codex, Cursor, Gemini CLI and any agent that reads skills and connects to MCP servers.
 The guides are free and open source under Apache 2.0.
-Rillow starts free with 30 credits, no credit card.
+Rillow starts free with 50 credits, no credit card.
 
 ## What's inside
 
-Ten guides in [`skills/rillow-seo`](skills/rillow-seo), and the rules that apply to all of them in [`SKILL.md`](skills/rillow-seo/SKILL.md).
+Eleven guides in [`skills/rillow-seo`](skills/rillow-seo), and the rules that apply to all of them in [`SKILL.md`](skills/rillow-seo/SKILL.md).
 
 | Guide | Your agent reads it when |
 |---|---|
@@ -22,6 +22,7 @@ Ten guides in [`skills/rillow-seo`](skills/rillow-seo), and the rules that apply
 | [ai-search](skills/rillow-seo/ai-search.md) | You ask about ChatGPT, Perplexity, Claude, Copilot, Google AI Overviews or AI Mode |
 | [agents](skills/rillow-seo/agents.md) | You want AI agents to find and use your site, or an audit reaches agent readiness |
 | [measure](skills/rillow-seo/measure.md) | After a change ships, or when you ask whether something worked |
+| [weekly](skills/rillow-seo/weekly.md) | You ask for the weekly check: it judges last week's changes and picks at most two page changes and two new pages |
 | [writing](skills/rillow-seo/writing.md) | Before it writes any text for your site: posts, pages, titles, descriptions or emails |
 
 A few of the rules: every number comes from a tool or your own data, never a guess.
@@ -69,6 +70,7 @@ Ask your agent in plain words:
 - "Write the next post in my plan."
 - "Do Google's AI answers cite my site for my main topics?"
 - "I changed my titles two weeks ago. Did it work?"
+- "Do my weekly Rillow check."
 
 ## Without Rillow
 

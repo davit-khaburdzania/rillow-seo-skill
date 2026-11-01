@@ -22,12 +22,12 @@ Take the narrowest shape the request allows, because a full audit buries one urg
    It returns the keywords the site ranks for, with position and URL, as of when the project was created.
    Use them to choose pages to check, and take current numbers from the Search Console export.
 3. Call get_performance.
-   It returns site totals for 28 days against the 28 before, and each published plan post with its position and clicks, but no other pages.
+   It returns site totals for 28 days against the 28 before, split into branded and non-branded, and each published plan post.
+   With pages true it lists every page, biggest click loss first, with the likely reason.
    If its window ends more than a few days ago, ask the user to open the Traffic page of the Rillow dashboard, which fetches Google's latest data when it opens, then call it again.
 4. Ask the user for a Search Console export.
    In the Performance report for Search results, set the date to compare the last 3 months with the previous period, and export the Queries and Pages tables.
    For a drop, also ask for the last 16 months by week, so you can see seasonality.
-   If Search Console offers the branded queries filter, ask for a second export with Non-branded selected.
    Ask what the Manual actions, Security issues and Page indexing reports show, with the example URLs for each indexing reason.
    In claude.ai, ask the user to paste or upload the files.
    If the user cannot, continue and list them under what you could not check.
@@ -93,7 +93,8 @@ Work through these steps in order and stop at the first cause you can confirm wi
 2. Ask the user whether the Manual actions or Security issues report shows anything.
    If one does, that is the diagnosis.
 3. Find the shape of the loss with the table below.
-   Compare the last 3 months with the previous period and with the same months last year, and sort pages by the clicks they lost.
+   get_performance with pages true sorts pages by the clicks they lost and names the likely reason.
+   Compare with the same months last year too.
 4. Check whether the pages that lost the most are still indexable.
    Fetch them live for status, noindex and canonical, and ask the user for their URL Inspection results.
 5. Check recent deploys.
@@ -157,8 +158,8 @@ Look for these before you propose any new page.
 | Signal | How to find it | The change |
 |---|---|---|
 | A page at about positions 4 to 20 (a practitioner heuristic) with real impressions | get_performance with queries true, the Pages and Queries export, or find_keywords with position_min 4 and position_max 20 as a dated starting list | Improve the page against the current top results, rewrite its title and description, and add 2 or 3 internal links to it from related pages that already get traffic |
-| A page has impressions but a click rate far below the site's own rate at that position | The Queries and Pages export, compared with the site's average click rate at the same position | Check get_serp for an AI Overview and ask the user about ads, which it does not show, then rewrite the title and description to say what the page offers |
-| Two pages compete for one search | Search Console filtered by that query, Pages tab: two URLs trading impressions over weeks for queries with the same intent | Merge into the stronger page, redirect the weaker one to it with a 301 or 308, update internal links, and drop the old URL from the sitemap |
+| A page has impressions but a click rate far below the site's own rate at that position | get_performance with queries true and position_max 5: ctr well below site ctr | Check get_serp for an AI Overview and ask the user about ads, which it does not show, then rewrite the title and description to say what the page offers |
+| Two pages compete for one search | "split with" in get_performance with queries true, then two URLs trading impressions over weeks for the same intent | Merge into the stronger page, redirect the weaker one to it with a 301 or 308, update internal links, and drop the old URL from the sitemap |
 | A post is decaying | Clicks down against the previous period and the same period last year, not explained by seasonality or an update | Refresh it with the content guide. The measure guide says which posts to refresh first |
 | A page is thin or outdated | Few or no impressions for months, or facts that are no longer true | Improve it, merge it into a stronger page on the same intent, noindex it if it helps visitors but not searchers, or remove it as the last resort |
 

@@ -46,7 +46,7 @@ Paid calls use the user's Rillow credits, and each result says how many.
 | get_serp | 0.06 to 0.12 credits, then free for 12 hours |
 | get_serp with strength | About 1.5 credits more, then free for 7 days |
 | get_keyword_metrics | Up to 1.1 credits for 200 keywords, then saved |
-| get_performance with queries | Free |
+| get_performance | Free |
 | get_ranked_keywords | Up to 1.1 credits, then free for a day |
 | get_brief | Up to 0.2 credits when uncached, then free for 7 days |
 
@@ -57,7 +57,7 @@ Work in this order.
    These positions count every element on the page, such as People Also Ask, so they can read lower than get_serp's organic position.
    position_min 4 and position_max 20 narrow it to pages that show below the top results, about positions 4 to 20 (a practitioner heuristic).
    Such a keyword needs its page improved, not a new page.
-   With Search Console connected, get_performance with queries true lists such queries from Google's current data.
+   With Search Console, get_performance with queries true lists them from Google's data, and with patterns true the kinds of searches the site shows for, like vs or alternative.
    Pass queries without a volume to get_keyword_metrics, because update_plan fills only numbers Rillow saved.
 2. Call get_competitors without a domain.
    Pick one or two true search competitors: sites with a similar product and audience that share keywords with the site.
@@ -129,8 +129,7 @@ The top 10 shows the intent, the page type and the depth Google rewards for that
 4. Read People Also Ask and related searches.
    Most are questions for sections of the same page.
    Give one its own post only when its own results page shows a different page type.
-5. Note the featured snippet.
-   Its text shows the kind of answer Google shows for this search, such as a definition, steps or a comparison.
+5. Note the featured snippet: its text shows the kind of answer Google wants, such as a definition, steps or a comparison.
 
 | Most of the top 10 | Make |
 |---|---|
@@ -244,7 +243,6 @@ Propose 5 to 10 topics in one table, best first.
 Then ask the user which to add, and wait for their choice before adding many items.
 Call update_plan with the chosen keywords.
 For each one, set format, signal, page_action, the cluster or strategy, and a note with the angle in one or two sentences: what the page will have that the current top 10 lacks.
-If the result says Rillow has no volume for a keyword, get_keyword_metrics fetches it.
 
 Save the decisions with remember.
 Record the focus the user chose, and topics they rejected with the reason, as notes, so later sessions do not propose them again.
