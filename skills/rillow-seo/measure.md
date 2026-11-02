@@ -9,7 +9,7 @@ Call get_performance without card_id for the whole site.
 
 - Site totals: Search Console clicks, impressions and average position, and Analytics sessions and users, for the 28 days ending on the latest day Rillow has synced, against the 28 days before.
   The non-branded line leaves out searches that contain the brand names get_project lists under brand, so judge SEO work on it.
-  If that day is more than a few days ago, ask the user to open the Traffic page of the Rillow dashboard, which fetches Google's latest data when it opens, then call get_performance again.
+  If that day is more than a few days ago, ask the user to open the Overview of the Rillow dashboard, which fetches Google's latest data when it opens, then call get_performance again.
   The Search Console totals cover web search only.
   Analytics users are daily users added up, so they count a returning person more than once.
   Compare them only with the same number from another period.

@@ -7,7 +7,7 @@ Most pages get "not due" or "leave it", and that is the expected result.
 ## Before you start
 
 1. Call get_project.
-   Read changes_due, changes_not_due, brand, the money_pages section of the memory, and plan items with update, which are pages the user picked on Rillow's Traffic page.
+   Read changes_due, changes_not_due, brand, the money_pages section of the memory, and plan items with update, which are pages the user picked on Rillow's Overview or Research page.
 2. If money_pages is empty, ask the user which pages lead to signups, bookings or sales, and the search each should win.
    Their analytics or payment tool shows the pages people visit right before they buy.
    Save the list with remember, at most 20 pages.

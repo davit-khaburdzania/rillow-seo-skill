@@ -24,7 +24,7 @@ Take the narrowest shape the request allows, because a full audit buries one urg
 3. Call get_performance.
    It returns site totals for 28 days against the 28 before, split into branded and non-branded, and each published plan post.
    With pages true it lists every page, biggest click loss first, with the likely reason.
-   If its window ends more than a few days ago, ask the user to open the Traffic page of the Rillow dashboard, which fetches Google's latest data when it opens, then call it again.
+   If its window ends more than a few days ago, ask the user to open the Overview of the Rillow dashboard, which fetches Google's latest data when it opens, then call it again.
 4. Ask the user for a Search Console export.
    In the Performance report for Search results, set the date to compare the last 3 months with the previous period, and export the Queries and Pages tables.
    For a drop, also ask for the last 16 months by week, so you can see seasonality.
