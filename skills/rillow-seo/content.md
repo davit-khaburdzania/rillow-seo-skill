@@ -54,7 +54,7 @@ Google also lists warning signs: writing to a word count (it has no preferred on
 On a product site, first-hand detail means screenshots of the real product, numbers from the product or the user's own use, the steps as they really are including the limits, and customer situations the user may share.
 Never invent numbers, quotes, customers, test results or credentials.
 Write TODO where a fact is missing and ask the user.
-save_article flags TODO as fix, so the page cannot pass with a gap left in it.
+save_article flags it as fix.
 
 AI-written content is fine when it is accurate and useful and not made mainly to manipulate rankings.
 Fact-check every claim before saving, including the title, meta description, alt text and structured data, because Google can show all of them.
@@ -194,14 +194,14 @@ Google says words in the URL have hardly any ranking effect, so never change a l
 - Use `<img>` or the framework's image component, not a CSS background, because Google does not index background images.
 - Set width and height, so the page does not shift while the image loads.
 - Lazy-load only images below the fold, never the hero.
-- Put each image next to the text it illustrates, with alt text as the writing guide says and no keyword lists.
-- Prefer real product screenshots to generated images wherever the page shows how the product works, because they are first-hand evidence.
+- Prefer real product screenshots where the page shows how the product works, because they are first-hand evidence.
 - Set the hero image as `og:image`, so shared links and Google have a preview image.
 
-### Author and date
+### Author, date and template
 
 Show a byline on posts and comparisons, linked to an author page with the person's background.
 Show the date with a label such as "Published" or "Updated", and keep it the same as datePublished and dateModified in the markup.
+Propose what the site's post template lacks: a table of contents on long posts, image captions, a box after the post with the product's next step, and related posts.
 
 ### Structured data
 
